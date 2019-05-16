@@ -1,15 +1,16 @@
+<div class="p-5">
 <h1>Result</h1>
+<br>
 <p>
   <% case @result %>
     <% when 1 %>
-      <strong> Congratulations! </strong> <%= params[:word] %> is a valid English word!
+      <strong> Congratulations! </strong> <font style="text-transform: uppercase;"> <%= params[:word] %> </font>is a valid English word!
     <% when 2 %>
-     Sorry but <strong> <%= params[:word] %> </strong> does not seem to be a valid English word!
+     Sorry but <font style="text-transform: uppercase; font-weight: bold;"><%= params[:word] %> </font> does not seem to be a valid English word!
     <% when 3 %>
-      Sorry but <strong> <%= params[:word] %> </strong> can't be built out of <%= params[:letters] %>
+      Sorry but <font style="text-transform: uppercase; font-weight: bold;"><%= params[:word] %> </font> can't be built out of <%= params[:letters] %>
     <% end %>
 </p>
 <br>
-
-
-<%= link_to "Try again", new_path %>
+<%= link_to "Play again", new_path %>
+</div>
